@@ -17,7 +17,7 @@ for(int i=0;i<8;i++){
     }
 }
 e-> tab [4] [4] = BRANCA;
-e-> ultima_jogada.coluna = 5;
-e-> ultima_jogada.linha = 5;
+e-> ultima_jogada.coluna = 4;
+e-> ultima_jogada.linha = 4;
 return e;
 }
