@@ -17,6 +17,8 @@ for(int i=0;i<8;i++){
     }
 }
 e-> tab [4] [4] = BRANCA;
+e-> tab [7] [7] = DOIS;
+e-> tab [0] [0] = UM;
 e-> ultima_jogada.coluna = 4;
 e-> ultima_jogada.linha = 4;
 return e;
