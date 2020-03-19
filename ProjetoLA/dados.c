@@ -21,3 +21,14 @@ e-> ultima_jogada.coluna = 4;
 e-> ultima_jogada.linha = 4;
 return e;
 }
+
+
+void atualiza_estado_casa(ESTADO *e, COORDENADA c,CASA cor){
+    e->tab[c.linha] [c.coluna] = cor;
+}
+CASA consulta_posicao(ESTADO *e, int x , int y){
+    return e->tab [x] [y];
+}
+void atualiza_ultima(ESTADO *e){
+    atualiza_estado_casa(e,e->ultima_jogada,PRETA);
+}
