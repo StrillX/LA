@@ -1,4 +1,3 @@
-
 #include "interface.h"
 #include "dados.h"
 #include "logica.h"
