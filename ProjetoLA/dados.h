@@ -28,10 +28,6 @@ void muda_pos_ultima(ESTADO *e, COORDENADA c);
 
 int consulta_jogador(ESTADO *e);
 
-int jogada_valida(ESTADO *e, COORDENADA c);
-
-int fim_jogo(ESTADO *e);
-int possivel_jogar(ESTADO *e);
 CASA consulta_posicao(ESTADO *e, int x, int y);
 CASA casa_final(ESTADO *e,int x);
 #endif //PROJETOLA_DADOS_H
