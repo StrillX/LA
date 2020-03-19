@@ -1,12 +1,22 @@
-//
-// Created by bruno on 11/03/20.
-//
 #include "dados.h"
 #include "logica.h"
+#include "interface.h"
 #include <stdio.h>
 int jogar(ESTADO *e, COORDENADA c) {
-    atualiza_estado_casa(e,c,BRANCA);
-    atualiza_ultima(e);
-    printf("jogar %d %d\n", c.coluna, c.linha);
+
+        if (jogada_valida(e, c)) {
+            atualiza_estado_casa(e, c, BRANCA);
+            atualiza_ultima(e);
+            muda_pos_ultima(e,c);
+
+            atualiza_jogador(e);
+        } else {
+            printf("Jogada Invalida\n");
+            atualiza_ultima(e);
+            muda_pos_ultima(e,c);
+            interpretador(e);
+
+        }
+
     return 1;
 }
