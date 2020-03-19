@@ -10,21 +10,22 @@
 #define BUF_SIZE 1024
 
 void mostrar_tabuleiro(ESTADO *e) {
-    for(int i = 7 ; i >= 0 ; i--){
+   for(int i = 7 ; i >= 0 ; i--){
         for(int j = 0; j < 8 ; j++){
-            if(j==7 && i == 7) printf("2");
-            else if (j==0 && i == 0) printf("1");
-            else{
-                if( e -> tab [i] [j] == VAZIO){
+            
+                if( consulta_posicao(e,i,j) == VAZIO){
                     printf(".");
                 }
-                else if(e -> tab [i] [j] == BRANCA){
+                else if(consulta_posicao(e,i,j) == BRANCA){
                     printf("*");
                 }
-                else{
+                else if(consulta_posicao(e,i,j)==PRETA){
                     printf("#");
                 }
-            }
+                else if(consulta_posicao(e,i,j)==UM){
+                    printf("1");
+                }
+                else printf("2");
 
         }
         printf("\n");
