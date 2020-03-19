@@ -5,7 +5,8 @@
 #include "logica.h"
 #include <stdio.h>
 int jogar(ESTADO *e, COORDENADA c) {
-    e-> tab [c.linha] [c.coluna] = BRANCA;
+    atualiza_estado_casa(e,c,BRANCA);
+    atualiza_ultima(e);
     printf("jogar %d %d\n", c.coluna, c.linha);
     return 1;
 }
