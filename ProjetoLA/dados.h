@@ -24,4 +24,8 @@ typedef struct {
     int jogador_atual;
 } ESTADO;
 ESTADO *inicializar_estado();
+void atualiza_estado_casa(ESTADO *e,COORDENADA c, CASA);
+void atualiza_ultima(ESTADO *e);
+
+CASA consulta_posicao(ESTADO *e, int x, int y);
 #endif //PROJETOLA_DADOS_H
