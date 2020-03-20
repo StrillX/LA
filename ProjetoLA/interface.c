@@ -4,10 +4,10 @@
 #include <string.h>
 #include <stdio.h>
 #define BUF_SIZE 1024
-void mostra_prompt(ESTADO *e,int ac, int jogada, int jogador){
+void mostra_prompt(ESTADO *e){
 
 
-    printf("# %d PL%d (%d) > ",ac,jogador,jogada);
+    printf("# %d PL%d (%d) > ",e->num_comando,e->jogador_atual,e->num_jogadas);
 
 }
 void mostrar_tabuleiro(ESTADO *e) {
@@ -36,34 +36,44 @@ void mostrar_tabuleiro(ESTADO *e) {
 }
 
 int interpretador(ESTADO *e) {
-    int ac=01;
-    int jogada = 0;
+
     while(!fim_jogo(e)) {
+        char fim [BUF_SIZE];
+        char filename[BUF_SIZE];
         char linha[BUF_SIZE];
         char col[2], lin[2];
 
-
-
-
-        int jogador = consulta_jogador(e);
-        if(consulta_jogador(e)==2) jogada++;
-        mostra_prompt(e,ac,jogada,jogador);
-        ac++;
+        if(consulta_jogador(e)==2) e->num_jogadas++;
+        mostra_prompt(e);
+        e->num_comando++;
 
 
         if (fgets(linha, BUF_SIZE, stdin) == NULL)return 0;
-        if (strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
-            COORDENADA coord = {*col - 'a', *lin - '1'};
+        if (strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", lin, col) == 2) {
+            COORDENADA coord = {*col - '1', *lin - 'a'};
 
             jogar(e, coord);
             mostrar_tabuleiro(e);
 
         }
 
+        if(sscanf(linha,"gr %s",filename)==1){
+            FILE  *fp;
+            fp=fopen("%s","w");
+            fprintf(fp,"%s");
+        }
+        if(sscanf(linha,"%c",fim)=='Q'){
+            printf("Jogo terminado!");
+            return 0;}
 
     }
+
     if(casa_final(e,1)!=UM)           printf("Parabens Campeao: Jogador 1");
     else if(casa_final(e,2)!=DOIS)    printf("Parabens Campeao: Jogador 2");
-    else printf("Parabens Campeao: Jogador %d",consulta_jogador(e));
+
+    else{
+        atualiza_jogador(e);
+        printf("Parabens Campeao: Jogador %d",consulta_jogador(e));
+    }
     return 1;
 }
