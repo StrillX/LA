@@ -1,12 +1,13 @@
 #include "dados.h"
 #include <stdlib.h>
 #include <string.h>
-
+//! Inicializa o tabuleiro.
 ESTADO *inicializar_estado() {
 
     ESTADO *e = (ESTADO *) malloc(sizeof(ESTADO));
     e->jogador_atual = 1;
     e->num_jogadas = 0;
+    e->num_comando = 0;
     for(int i=0;i<8;i++){
         for(int j = 0 ; j<8; j++){
             e-> tab [i] [j] = VAZIO;
@@ -19,13 +20,18 @@ ESTADO *inicializar_estado() {
     e-> ultima_jogada.linha = 4;
     return e;
 }
-
+//! Atualiza o estado de uma casa para uma cor determinada.
 void atualiza_estado_casa(ESTADO *e, COORDENADA c,CASA cor){
-    e->tab[c.linha] [c.coluna] = cor;
+    e->tab[c.coluna] [c.linha] = cor;
+
 }
+
+
 CASA consulta_posicao(ESTADO *e, int x , int y){
     return e->tab [x] [y];
 }
+
+
 void atualiza_ultima(ESTADO *e){
     atualiza_estado_casa(e,e->ultima_jogada,PRETA);
 }
