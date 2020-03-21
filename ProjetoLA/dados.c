@@ -1,7 +1,15 @@
+/**
+@file dados.h
+Definição do estado e das funções que o manipulam
+*/
+
 #include "dados.h"
 #include <stdlib.h>
 #include <string.h>
-//! Inicializa o tabuleiro.
+/**
+ * \brief Inicializa o estado
+ * @return O estado inicializado
+ */
 ESTADO *inicializar_estado() {
 
     ESTADO *e = (ESTADO *) malloc(sizeof(ESTADO));

@@ -10,6 +10,7 @@ CMakeFiles/ProjetoLA.dir/interface.c.o: ../interface.h
 CMakeFiles/ProjetoLA.dir/interface.c.o: ../logica.h
 
 CMakeFiles/ProjetoLA.dir/logica.c.o: ../dados.h
+CMakeFiles/ProjetoLA.dir/logica.c.o: ../interface.h
 CMakeFiles/ProjetoLA.dir/logica.c.o: ../logica.c
 CMakeFiles/ProjetoLA.dir/logica.c.o: ../logica.h
 
