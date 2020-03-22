@@ -1,6 +1,3 @@
-//
-// Created by bruno on 11/03/20.
-//
 
 #include "interface.h"
 #include "dados.h"
@@ -35,7 +32,7 @@ void mostrar_tabuleiro(ESTADO *e, FILE *destino) {
                 else fprintf(destino,"2");
 
         }
-        printf("\n");
+        fprintf(destino,"\n");
     }
     printf("  abcdefgh\n");
 }
@@ -114,22 +111,22 @@ void convertelinha(char *linhas,int coord_y,ESTADO *e){
     int i;
     for(i=0;i<=7;i++){
        if(linhas[i]=='#'){
-           e->tab[i][coord_y]= PRETA;
+           e->tab[coord_y][i]= PRETA;
            e->num_jogadas++;
        }
        else if (linhas[i]=='*'){
-           e->tab[i][coord_y] =BRANCA;
+           e->tab[coord_y][i] =BRANCA;
            COORDENADA coord = {i,coord_y};
            muda_pos_ultima(e,coord);
            e->num_jogadas++;
        }
        else if (linhas[i]=='.'){
-           e->tab[i][coord_y] =VAZIO;
+           e->tab[coord_y][i] =VAZIO;
        }
        else if (linhas[i]=='1'){
-           e->tab[i][coord_y] =UM;
+           e->tab[coord_y][i] =UM;
        }
-       else e->tab[i][coord_y] = DOIS;
+       else e->tab[coord_y][i] = DOIS;
 
     }
 }
