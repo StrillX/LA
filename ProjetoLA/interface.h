@@ -40,4 +40,5 @@ void convertelinha(char *linhas,int coord_y,ESTADO *e);
  * @param e Apontador para o estado
  */
 void ler(char *file,ESTADO *e);
+void movs(ESTADO *e,FILE * destino);
 #endif //PROJETOLA_INTERFACE_H
