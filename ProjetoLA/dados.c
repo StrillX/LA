@@ -6,16 +6,13 @@ Definição do estado e das funções que o manipulam
 #include "dados.h"
 #include <stdlib.h>
 #include <string.h>
-/**
- * \brief Inicializa o estado
- * @return O estado inicializado
- */
+
 ESTADO *inicializar_estado() {
 
     ESTADO *e = (ESTADO *) malloc(sizeof(ESTADO));
     e->jogador_atual = 1;
     e->num_jogadas = 0;
-    e->num_comando = 0;
+    e->num_comando = 1;
     for(int i=0;i<8;i++){
         for(int j = 0 ; j<8; j++){
             e-> tab [i] [j] = VAZIO;
@@ -60,5 +57,14 @@ void muda_pos_ultima(ESTADO *e, COORDENADA c){
 CASA casa_final(ESTADO *e,int x){
     if(x==1&&consulta_posicao(e,0,0)==BRANCA) return BRANCA;
     if(x==2&&consulta_posicao(e,7,7)==BRANCA) return BRANCA;
+
+}
+void atualiza_jogadas(ESTADO *e,COORDENADA c){
+    if(e->jogador_atual==1){
+        e->jogadas[e->num_jogadas].jogador1    = c ;
+    }
+    else {
+        e->jogadas[e->num_jogadas-1].jogador2  = c ;
+    }
 
 }
