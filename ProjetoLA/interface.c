@@ -1,3 +1,5 @@
+
+
 #include "interface.h"
 #include "dados.h"
 #include "logica.h"
@@ -7,8 +9,11 @@
 #define BUF_SIZE 1024
 void mostra_prompt(ESTADO *e){
 
+    if(e->num_jogadas<10)
+        printf("# 0%d PL%d (%d) > ",e->num_comando,e->jogador_atual,e->num_jogadas);
 
-    printf("# %d PL%d (%d) > ",e->num_comando,e->jogador_atual,e->num_jogadas);
+    else
+        printf("# %d PL%d (%d) > ",e->num_comando,e->jogador_atual,e->num_jogadas);
 
 }
 void mostrar_tabuleiro(ESTADO *e, FILE *destino) {
@@ -39,6 +44,8 @@ void mostrar_tabuleiro(ESTADO *e, FILE *destino) {
 int interpretador(ESTADO *e) {
     int fim=0;
     char q;
+    char mov[]= "movs";
+    char conteudo[BUF_SIZE];
     while(!fim_jogo(e)) {
 
         char filename[BUF_SIZE];
@@ -70,13 +77,18 @@ int interpretador(ESTADO *e) {
             ler(filename,e);
             mostrar_tabuleiro(e,stdout);
         }
-
-        else if(sscanf(linha,"%c",&q)==1){
-            if(q=='Q') {
+        else if(sscanf(linha,"%s",conteudo)){
+            if(strcmp(conteudo,mov)!=0){
+                movs(e,stdout);
+            }
+        }
+        else if(sscanf(linha,"%c",&q)==1) {
+            if (q == 'Q') {
                 fim = 1;
                 break;
             }
         }
+
 
     }
     if(fim==1) return 0;
@@ -110,4 +122,14 @@ void ler(char *file,ESTADO *e){
         }
     fclose(tabuleiroler);
 
+}
+void movs(ESTADO *e,FILE * destino){
+    for(int i = 0; i < 32; i++) {
+        if (i<10) {
+            fprintf(destino, "0%d: %c%d %c%d",i+1,e->jogadas[i].jogador1.linha+'a'+1,e->jogadas[i].jogador1.coluna+1,e->jogadas[i].jogador2.linha+'a'+1,e->jogadas[i].jogador2.coluna+1);
+        }
+        else{
+            fprintf(destino, "%d: %c%d %c%d",i+1,e->jogadas[i].jogador1.linha+'a'+1,e->jogadas[i].jogador1.coluna+1,e->jogadas[i].jogador2.linha+'a'+1,e->jogadas[i].jogador2.coluna+1);
+        }
+    }
 }
