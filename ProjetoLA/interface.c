@@ -1,4 +1,3 @@
-
 #include "interface.h"
 #include "dados.h"
 #include "logica.h"
@@ -99,34 +98,16 @@ void guardar(char *file,ESTADO *e){
 void ler(char *file,ESTADO *e){
     FILE *tabuleiroler;
     tabuleiroler=fopen(file,"r");
-        char linhas[BUF_SIZE];
-        for(int i = 7; i >= 0; i++){
-            fgets(linhas,8,tabuleiroler);
-            convertelinha(linhas,i,e);
+        char buffer[BUF_SIZE];
+        int l = 7;
+
+        while(fgets(buffer, BUF_SIZE, tabuleiroler) != NULL) {
+            for(int c = 0; c < 8; c++){
+                COORDENADA coord = {l, c};
+                atualiza_estado_casa(e, coord, buffer[c]);
+            }
+            l--;
         }
     fclose(tabuleiroler);
 
-}
-void convertelinha(char *linhas,int coord_y,ESTADO *e){
-    int i;
-    for(i=0;i<=7;i++){
-       if(linhas[i]=='#'){
-           e->tab[coord_y][i]= PRETA;
-           e->num_jogadas++;
-       }
-       else if (linhas[i]=='*'){
-           e->tab[coord_y][i] =BRANCA;
-           COORDENADA coord = {i,coord_y};
-           muda_pos_ultima(e,coord);
-           e->num_jogadas++;
-       }
-       else if (linhas[i]=='.'){
-           e->tab[coord_y][i] =VAZIO;
-       }
-       else if (linhas[i]=='1'){
-           e->tab[coord_y][i] =UM;
-       }
-       else e->tab[coord_y][i] = DOIS;
-
-    }
 }
