@@ -12,7 +12,7 @@ Definição do estado e das funções que o manipulam
 /**
 \brief Tipo de dados para a casa
 */
-    typedef enum {VAZIO, BRANCA, PRETA,UM,DOIS} CASA;
+    typedef enum {VAZIO='.', BRANCA='*', PRETA='#',UM='1',DOIS='2'} CASA;
 /**
 \brief Tipo de dados para as coordenadas
 */
@@ -97,7 +97,6 @@ CASA consulta_posicao(ESTADO *e, int x, int y);
  * @param x determina se é a casa com 1 ou 2 a ser analisada
  * @return O estado atual da casa 1 ou 2
  */
-
-
 CASA casa_final(ESTADO *e,int x);
+void atualiza_jogadas(ESTADO *e,COORDENADA c);
 #endif //PROJETOLA_DADOS_H
