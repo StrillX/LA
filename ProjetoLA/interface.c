@@ -1,3 +1,5 @@
+
+
 #include "interface.h"
 #include "dados.h"
 #include "logica.h"
@@ -60,6 +62,7 @@ int interpretador(ESTADO *e) {
             COORDENADA coord = {*col - '1', *lin - 'a'};
 
             jogar(e, coord);
+
             mostrar_tabuleiro(e,stdout);
 
         }
@@ -103,44 +106,49 @@ void guardar(char *file,ESTADO *e){
     FILE *tabuleiroescrever;
     tabuleiroescrever=fopen(file,"w");
     mostrar_tabuleiro(e,tabuleiroescrever);
+    fprintf(tabuleiroescrever," ");
+    fprintf(tabuleiroescrever,"\n");
+    movs(e,tabuleiroescrever);
     fclose(tabuleiroescrever);
 }
 void ler(char *file,ESTADO *e){
     FILE *tabuleiroler;
     tabuleiroler=fopen(file,"r");
-        char buffer[BUF_SIZE];
-        int l = 7;
+    char buffer[BUF_SIZE];
+    int l = 7;
+    COORDENADA ultima;
+    int jogadas_atual = 0;
+    while(fgets(buffer, BUF_SIZE, tabuleiroler) != NULL) {
 
-        while(fgets(buffer, BUF_SIZE, tabuleiroler) != NULL) {
-            for(int c = 0; c < 8; c++){
-                COORDENADA coord = {l, c};
-                atualiza_estado_casa(e, coord, buffer[c]);
-            }
-            l--;
+        for(int c = 0; c < 8; c++){
+            COORDENADA coord = {l, c};
+            atualiza_estado_casa(e, coord, buffer[c]);
+            if(buffer[c]== '#')jogadas_atual++;
+            if(consulta_posicao(e,l,c)==BRANCA){ ultima.coluna = l; ultima.linha = c;}
         }
+        l--;
+
+    }
+    if(jogadas_atual%2==0)e->jogador_atual=1;
+    else e->jogador_atual=2;
+
+    if(ultima.coluna==-1)ultima.coluna=0;
+    e->num_jogadas=jogadas_atual/2;
+    muda_pos_ultima(e,ultima);
     fclose(tabuleiroler);
 
 }
 void movs(ESTADO *e,FILE * destino){
     COORDENADA coor = {-1,-1};
     for(int i = 0; i < 32; i++) {
-        if (i<10) {
+
             if (e->jogadas[i].jogador2.linha==coor.linha&&e->jogadas[i].jogador2.coluna==coor.coluna&&e->jogadas[i].jogador1.linha!=coor.linha&&e->jogadas[i].jogador1.coluna!=coor.coluna){
-                fprintf(destino, "0%d: %c%d\n",i+1,e->jogadas[i].jogador1.linha+'a',e->jogadas[i].jogador1.coluna+1);
+                fprintf(destino, "%02d: %c%d\n",i+1,e->jogadas[i].jogador1.linha+'a',e->jogadas[i].jogador1.coluna+1);
             }
             else if(e->jogadas[i].jogador2.linha!=coor.linha&&e->jogadas[i].jogador2.coluna!=coor.coluna&&e->jogadas[i].jogador1.linha!=coor.linha&&e->jogadas[i].jogador1.coluna!=coor.coluna){
-                fprintf(destino, "0%d: %c%d %c%d\n",i+1,e->jogadas[i].jogador1.linha+'a',e->jogadas[i].jogador1.coluna+1,e->jogadas[i].jogador2.linha+'a',e->jogadas[i].jogador2.coluna+1);
+                fprintf(destino, "%02d: %c%d %c%d\n",i+1,e->jogadas[i].jogador1.linha+'a',e->jogadas[i].jogador1.coluna+1,e->jogadas[i].jogador2.linha+'a',e->jogadas[i].jogador2.coluna+1);
             }
             else break;
-        }
-        else{
-            if (e->jogadas[i].jogador2.linha==coor.linha&&e->jogadas[i].jogador2.coluna==coor.coluna&&e->jogadas[i].jogador1.linha!=coor.linha&&e->jogadas[i].jogador1.coluna!=coor.coluna){
-                fprintf(destino, "%d: %c%d\n",i+1,e->jogadas[i].jogador1.linha+'a',e->jogadas[i].jogador1.coluna+1);
-            }
-            else if(e->jogadas[i].jogador2.linha!=coor.linha&&e->jogadas[i].jogador2.coluna!=coor.coluna&&e->jogadas[i].jogador1.linha!=coor.linha&&e->jogadas[i].jogador1.coluna!=coor.coluna){
-                fprintf(destino, "%d: %c%d %c%d\n",i+1,e->jogadas[i].jogador1.linha+'a',e->jogadas[i].jogador1.coluna+1,e->jogadas[i].jogador2.linha+'a',e->jogadas[i].jogador2.coluna+1);
-            }
-            else break;
-        }
+
     }
 }
