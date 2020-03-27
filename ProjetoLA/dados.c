@@ -33,5 +33,42 @@ ESTADO *inicializar_estado() {
 //! Atualiza o estado de uma casa para uma cor determinada.
 void atualiza_estado_casa(ESTADO *e, COORDENADA c,CASA cor){
     e->tab[c.coluna] [c.linha] = cor;
+}
+
+
+CASA consulta_posicao(ESTADO *e, int x , int y){
+    return e->tab [x] [y];
+}
+
+
+void atualiza_ultima(ESTADO *e){
+    atualiza_estado_casa(e,e->ultima_jogada,PRETA);
+}
+void atualiza_jogador(ESTADO *e){
+    if(e->jogador_atual==1)e->jogador_atual=2;
+    else (e->jogador_atual=1);
+}
+int consulta_jogador(ESTADO *e){
+    if(e->jogador_atual==1)return 1;
+    else return 2;
+}
+
+
+void muda_pos_ultima(ESTADO *e, COORDENADA c){
+    e->ultima_jogada.coluna= c.coluna;
+    e->ultima_jogada.linha = c.linha;
+}
+CASA casa_final(ESTADO *e,int x){
+    if(x==1&&consulta_posicao(e,0,0)==BRANCA) return BRANCA;
+    if(x==2&&consulta_posicao(e,7,7)==BRANCA) return BRANCA;
+
+}
+void atualiza_jogadas(ESTADO *e,COORDENADA c){
+    if(e->jogador_atual==1){
+        e->jogadas[e->num_jogadas].jogador1    = c ;
+    }
+    else {
+        e->jogadas[e->num_jogadas-1].jogador2  = c ;
+    }
 
 }
