@@ -13,6 +13,7 @@ int jogar(ESTADO *e, COORDENADA c) {
 
             atualiza_jogadas(e,c);
             atualiza_jogador(e);
+            if(consulta_jogador(e)==2) e->num_jogadas++;
         } else {
             printf("Jogada Invalida\n");
 
