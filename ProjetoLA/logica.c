@@ -7,6 +7,7 @@
 int jogar(ESTADO *e, COORDENADA c) {
 
         if (jogada_valida(e, c)) {
+
             atualiza_estado_casa(e, c, BRANCA);
             atualiza_ultima(e);
             muda_pos_ultima(e,c);
