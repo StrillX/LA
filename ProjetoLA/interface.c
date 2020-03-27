@@ -1,5 +1,3 @@
-
-
 #include "interface.h"
 #include "dados.h"
 #include "logica.h"
@@ -52,7 +50,7 @@ int interpretador(ESTADO *e) {
         char linha[BUF_SIZE];
         char col[2], lin[2];
 
-        if(consulta_jogador(e)==2) e->num_jogadas++;
+
         mostra_prompt(e);
         e->num_comando++;
 
@@ -78,7 +76,7 @@ int interpretador(ESTADO *e) {
             mostrar_tabuleiro(e,stdout);
         }
         else if(sscanf(linha,"%s",conteudo)){
-            if(strcmp(conteudo,mov)!=0){
+            if(strcmp(conteudo,mov)==0){
                 movs(e,stdout);
             }
         }
@@ -124,12 +122,25 @@ void ler(char *file,ESTADO *e){
 
 }
 void movs(ESTADO *e,FILE * destino){
+    COORDENADA coor = {-1,-1};
     for(int i = 0; i < 32; i++) {
         if (i<10) {
-            fprintf(destino, "0%d: %c%d %c%d",i+1,e->jogadas[i].jogador1.linha+'a'+1,e->jogadas[i].jogador1.coluna+1,e->jogadas[i].jogador2.linha+'a'+1,e->jogadas[i].jogador2.coluna+1);
+            if (e->jogadas[i].jogador2.linha==coor.linha&&e->jogadas[i].jogador2.coluna==coor.coluna&&e->jogadas[i].jogador1.linha!=coor.linha&&e->jogadas[i].jogador1.coluna!=coor.coluna){
+                fprintf(destino, "0%d: %c%d\n",i+1,e->jogadas[i].jogador1.linha+'a',e->jogadas[i].jogador1.coluna+1);
+            }
+            else if(e->jogadas[i].jogador2.linha!=coor.linha&&e->jogadas[i].jogador2.coluna!=coor.coluna&&e->jogadas[i].jogador1.linha!=coor.linha&&e->jogadas[i].jogador1.coluna!=coor.coluna){
+                fprintf(destino, "0%d: %c%d %c%d\n",i+1,e->jogadas[i].jogador1.linha+'a',e->jogadas[i].jogador1.coluna+1,e->jogadas[i].jogador2.linha+'a',e->jogadas[i].jogador2.coluna+1);
+            }
+            else break;
         }
         else{
-            fprintf(destino, "%d: %c%d %c%d",i+1,e->jogadas[i].jogador1.linha+'a'+1,e->jogadas[i].jogador1.coluna+1,e->jogadas[i].jogador2.linha+'a'+1,e->jogadas[i].jogador2.coluna+1);
+            if (e->jogadas[i].jogador2.linha==coor.linha&&e->jogadas[i].jogador2.coluna==coor.coluna&&e->jogadas[i].jogador1.linha!=coor.linha&&e->jogadas[i].jogador1.coluna!=coor.coluna){
+                fprintf(destino, "%d: %c%d\n",i+1,e->jogadas[i].jogador1.linha+'a',e->jogadas[i].jogador1.coluna+1);
+            }
+            else if(e->jogadas[i].jogador2.linha!=coor.linha&&e->jogadas[i].jogador2.coluna!=coor.coluna&&e->jogadas[i].jogador1.linha!=coor.linha&&e->jogadas[i].jogador1.coluna!=coor.coluna){
+                fprintf(destino, "%d: %c%d %c%d\n",i+1,e->jogadas[i].jogador1.linha+'a',e->jogadas[i].jogador1.coluna+1,e->jogadas[i].jogador2.linha+'a',e->jogadas[i].jogador2.coluna+1);
+            }
+            else break;
         }
     }
 }
