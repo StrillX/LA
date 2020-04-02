@@ -40,7 +40,25 @@ void convertelinha(char *linhas,int coord_y,ESTADO *e);
  * @param e Apontador para o estado
  */
 ESTADO *ler(char *file);
+/**
+ * /brief Apresenta todos os movimentos realizados
+ * @param e Apontador para o estado
+ * @param destino onde vai ser impresso o tabuleiro
+ */
 void movs(ESTADO *e,FILE * destino);
+/**
+ * /brief Insere os movimentos realizados no ler
+ * @param e apontador para o estado
+ * @param c coordenadas dos movimentos
+ * @param posicao indica a posição dos jogadores
+ * @param jogador indica o jogador atual
+ */
 void inseremovs(ESTADO *e,COORDENADA c,int posicao,int jogador);
+/**
+ * /brief Dá load ao tabuleiro da posição desejada
+ * @param e indicador de estado
+ * @param njogada indica o número da jogada atual
+ * @return
+ */
 ESTADO pos (ESTADO *e, int njogada);
 #endif //PROJETOLA_INTERFACE_H
