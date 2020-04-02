@@ -98,5 +98,10 @@ CASA consulta_posicao(ESTADO *e, int x, int y);
  * @return O estado atual da casa 1 ou 2
  */
 CASA casa_final(ESTADO *e,int x);
+/**
+ * /brief Atualiza as jogadas
+ * @param e indicador para o estado
+ * @param c A coordenada
+ */
 void atualiza_jogadas(ESTADO *e,COORDENADA c);
 #endif //PROJETOLA_DADOS_H
