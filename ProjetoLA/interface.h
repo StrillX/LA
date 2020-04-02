@@ -39,6 +39,8 @@ void convertelinha(char *linhas,int coord_y,ESTADO *e);
  * @param file O nome do ficheiro
  * @param e Apontador para o estado
  */
-void ler(char *file,ESTADO *e);
+ESTADO *ler(char *file);
 void movs(ESTADO *e,FILE * destino);
+void inseremovs(ESTADO *e,COORDENADA c,int posicao,int jogador);
+ESTADO pos (ESTADO *e, int njogada);
 #endif //PROJETOLA_INTERFACE_H
