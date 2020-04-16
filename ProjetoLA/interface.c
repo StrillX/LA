@@ -1,3 +1,5 @@
+
+
 #include "interface.h"
 #include "dados.h"
 #include "logica.h"
@@ -34,10 +36,12 @@ void mostrar_tabuleiro(ESTADO *e, FILE *destino) {
 }
 
 int interpretador(ESTADO *e) {
+    ESTADO *r=inicializar_estado();
     int fim=0,njogada;
     char q;
     char mov[]= "movs";
     char conteudo[BUF_SIZE];
+    int pos_usado = 0;
     while(!fim_jogo(e)) {
 
         char filename[BUF_SIZE];
@@ -52,8 +56,12 @@ int interpretador(ESTADO *e) {
         if (fgets(linha, BUF_SIZE, stdin) == NULL)return 0;
         if (strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", lin, col) == 2) {
             COORDENADA coord = {*col - '1', *lin - 'a'};
-
+            if(pos_usado){
+                e=r;
+            }
             jogar(e, coord);
+
+
 
             mostrar_tabuleiro(e,stdout);
 
@@ -66,9 +74,14 @@ int interpretador(ESTADO *e) {
 
 
         }
-        else if(sscanf(linha,"pos %d",&njogada) && njogada <= e->num_jogadas){
-            *e=pos(e,njogada);
-            mostrar_tabuleiro(e,stdout);
+        else if(sscanf(linha,"pos %d",&njogada)){
+
+
+            *r=pos(e,njogada);
+            pos_usado=1;
+
+
+            mostrar_tabuleiro(r,stdout);
         }
         else if(sscanf(linha,"ler %s",filename)==1){
             e = ler(filename);
@@ -158,6 +171,7 @@ ESTADO * ler(char *file){
 
 
     fclose(tabuleiroler);
+
     return e;
 }
 void movs(ESTADO *e,FILE * destino){
@@ -185,6 +199,7 @@ void inseremovs(ESTADO *e,COORDENADA c,int posicao,int jogador){
     }
 }
 ESTADO pos (ESTADO *e, int njogada){
+
     ESTADO *r;
     r=inicializar_estado();
     for(int i = 0; i<njogada;i++){
