@@ -1,10 +1,10 @@
-
-
+#include <time.h>
 #include "interface.h"
 #include "dados.h"
 #include "logica.h"
 #include <string.h>
 #include <stdio.h>
+#include "lista.h"
 #include <stdlib.h>
 #define BUF_SIZE 1024
 void mostra_prompt(ESTADO *e){
@@ -40,6 +40,7 @@ int interpretador(ESTADO *e) {
     int fim=0,njogada;
     char q;
     char mov[]= "movs";
+    char jogue[]= "jog";
     char conteudo[BUF_SIZE];
     int pos_usado = 0;
     while(!fim_jogo(e)) {
@@ -87,9 +88,14 @@ int interpretador(ESTADO *e) {
             e = ler(filename);
             mostrar_tabuleiro(e,stdout);
         }
-        else if(sscanf(linha,"%s",conteudo)){
-            if(strcmp(conteudo,mov)==0){
+        else if(sscanf(linha,"%s",conteudo)&& strcmp(conteudo,mov)==0){
+
                 movs(e,stdout);
+
+        }
+        else if(sscanf(linha,"%s",conteudo)){
+            if(strcmp(conteudo,jogue)==0){
+               jog(e);
             }
         }
         else if(sscanf(linha,"%c",&q)==1) {
@@ -209,4 +215,26 @@ ESTADO pos (ESTADO *e, int njogada){
        jogar(r,jogada2);
     }
     return *r;
+}
+void jog (ESTADO *e){
+    COORDENADA c,*coordenada;
+    LISTA jogadas = criar_lista();
+    jogadas=listagem_de_jogadas(e,jogadas);
+
+
+    srand(time(NULL));
+    int njogada = rand() % 8;
+
+    LISTA L = jogadas;
+    while (njogada && !lista_esta_vazia(L)){
+        coordenada=(COORDENADA*) devolve_cabeca(L);
+        c= *coordenada;
+        L=proximo(L);
+        njogada--;
+    }
+    jogar(e,c);
+    while(!lista_esta_vazia(jogadas)){
+        jogadas=remove_cabeca(jogadas);
+    }
+    mostrar_tabuleiro(e,stdout);
 }
