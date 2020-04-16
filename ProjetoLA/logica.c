@@ -109,3 +109,19 @@ int possivel_jogar(ESTADO *e){
 
     return 0;
 }
+LISTA listagem_de_jogadas(ESTADO *e,LISTA jogadas){
+    COORDENADA c,*jogada;
+    for(int i = 0; i < 8; i++){
+        for(int j = 0; j < 8; j++){
+            c.coluna = i;
+            c.linha = j;
+            if(jogada_valida(e,c)){
+                jogada = malloc(sizeof(COORDENADA));
+                jogada->linha=c.linha;
+                jogada->coluna = c.coluna;
+                jogadas = insere_cabeca(jogadas,jogada);
+            }
+        }
+    }
+    return jogadas;
+}
