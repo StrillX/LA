@@ -4,6 +4,7 @@
 #include "interface.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 int jogar(ESTADO *e, COORDENADA c) {
 
         if (jogada_valida(e, c)) {
@@ -124,4 +125,8 @@ LISTA listagem_de_jogadas(ESTADO *e,LISTA jogadas){
         }
     }
     return jogadas;
+}
+double distancia (COORDENADA c, COORDENADA destino){
+    double res = (c.coluna-destino.coluna)*(c.coluna-destino.coluna)+(c.linha-destino.linha)*(c.linha-destino.linha);
+    return res;
 }
