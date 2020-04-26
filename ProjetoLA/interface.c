@@ -41,6 +41,7 @@ int interpretador(ESTADO *e) {
     char q;
     char mov[]= "movs";
     char jogue[]= "jog";
+    char jogue2[]= "jog2";
     char conteudo[BUF_SIZE];
     int pos_usado = 0;
     while(!fim_jogo(e)) {
@@ -93,10 +94,15 @@ int interpretador(ESTADO *e) {
                 movs(e,stdout);
 
         }
-        else if(sscanf(linha,"%s",conteudo)){
-            if(strcmp(conteudo,jogue)==0){
+        else if(sscanf(linha,"%s",conteudo) && strcmp(conteudo,jogue)==0){
+
                jog(e);
-            }
+
+        }
+        else if(sscanf(linha,"%s",conteudo)&& strcmp(conteudo,jogue2)==0){
+
+                jog2(e);
+
         }
         else if(sscanf(linha,"%c",&q)==1) {
             if (q == 'Q') {
@@ -217,24 +223,61 @@ ESTADO pos (ESTADO *e, int njogada){
     return *r;
 }
 void jog (ESTADO *e){
+    //JOGADAS ALEATORIAS
     COORDENADA c,*coordenada;
     LISTA jogadas = criar_lista();
     jogadas=listagem_de_jogadas(e,jogadas);
 
 
-    srand(time(NULL));
-    int njogada = rand() % 8;
 
+    int njogada = rand() % 8;
+    // Escolhe uma jogada aleatoria de todas as jogadas presentes na lista
     LISTA L = jogadas;
     while (njogada && !lista_esta_vazia(L)){
-        coordenada=(COORDENADA*) devolve_cabeca(L);
+        coordenada= (COORDENADA*) devolve_cabeca(L);
         c= *coordenada;
         L=proximo(L);
         njogada--;
     }
+    //Impede que uma jogada seja invalida
+    if(!jogada_valida(e,c)){
+        jog(e);
+    }
+
     jogar(e,c);
     while(!lista_esta_vazia(jogadas)){
         jogadas=remove_cabeca(jogadas);
     }
+    mostrar_tabuleiro(e,stdout);
+}
+void jog2 (ESTADO *e){
+    double distmin = 500;
+    COORDENADA destino;
+    COORDENADA c,*coordenada,final;
+    LISTA jogadas = criar_lista();
+    jogadas=listagem_de_jogadas(e,jogadas);
+    LISTA  L = jogadas;
+    while(!lista_esta_vazia(L)){
+        if(e->jogador_atual==1){
+
+            destino.linha=0;
+            destino.coluna=0;
+        }
+        else{
+
+            destino.linha=7;
+            destino.coluna=7;
+        }
+        coordenada= (COORDENADA*) devolve_cabeca(L);
+        c= *coordenada;
+        L=proximo(L);
+
+        if(distancia(c,destino)<distmin){
+            final=c;
+            distmin=distancia(c,destino);
+        }
+    }
+
+    jogar(e,final);
     mostrar_tabuleiro(e,stdout);
 }
