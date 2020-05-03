@@ -32,6 +32,18 @@ int fim_jogo(ESTADO *e);
  * @return 1 ou 0, dependendo de ser verdadeiro ou nao
  */
 int possivel_jogar(ESTADO *e);
+/**
+ * \brief Cria uma lista ligadas com todas as jogadas possiveis e validas
+ * @param e Apontador para o estado
+ * @param jogadas Lista vazia de jogadas
+ * @return Retorna uma lista ligada com todas a coordenadas possiveis de jogadas validas
+ */
 LISTA listagem_de_jogadas(ESTADO *e,LISTA jogadas);
+/**
+ * \brief Calcula a distancia de uma coordenada a outra
+ * @param c Coordenada
+ * @param destino Coordenada
+ * @return Distancia entre as duas
+ */
 double distancia (COORDENADA c, COORDENADA destino);
 #endif //PROJETOLA_LOGICA_H
