@@ -8,7 +8,7 @@ Definição das funções que mostram ao utilizador o essencial para este poder 
 /**
  * \brief Apresenta o tabuleiro para o utilizador
  * @param e Apontador para o estado
- * @param destino onde vai ser impresso o tabuleiro
+ * @param destino Onde vai ser impresso o tabuleiro
  */
 void mostrar_tabuleiro(ESTADO *e,FILE *destino);
 /**
@@ -37,12 +37,37 @@ void convertelinha(char *linhas,int coord_y,ESTADO *e);
 /**
  * \brief Le um ficheiro
  * @param file O nome do ficheiro
- * @param e Apontador para o estado
  */
 ESTADO *ler(char *file);
+/**
+ * \brief Mostra os movimentos
+ * @param e Apontador para o estado
+ * @param destino Onde vai ser impresso a lista de movimentos
+ */
 void movs(ESTADO *e,FILE * destino);
+/**
+ * \brief Insere movimentos tendo em conta o jogador atual
+ * @param e Apontador para o estado
+ * @param c Coordenada
+ * @param posicao Posição do jogador
+ * @param jogador Jogador atual
+ */
 void inseremovs(ESTADO *e,COORDENADA c,int posicao,int jogador);
+/**
+ * \brief Retorna o tabulerio para uma jogada anterior
+ * @param e Apontador para o estado
+ * @param njogada o numero da jogada para a qual se pretende retornar
+ * @return Retorna o estado do tabulerio nessa jogada
+ */
 ESTADO pos (ESTADO *e, int njogada);
+/**
+\brief Joga pelo jogador-Aleatorio
+@param e Apontador para o estado
+*/
 void jog (ESTADO *e);
+/**
+\brief Joga pelo jogador-Distancia
+@param e Apontador para o estado
+*/
 void jog2 (ESTADO *e);
 #endif //PROJETOLA_INTERFACE_H
