@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ProjetoLA"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ProjetoLA">
+				<Option output="/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/ProjetoLA" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 ProjetoLA"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ProjetoLA/fast">
+				<Option output="/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/ProjetoLA" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 ProjetoLA/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/bruno/CLionProjects/ProjetoLA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/bruno/CLionProjects/ProjetoLA/dados.c">
+			<Option target="ProjetoLA"/>
+		</Unit>
+		<Unit filename="/home/bruno/CLionProjects/ProjetoLA/dados.h">
+			<Option target="ProjetoLA"/>
+		</Unit>
+		<Unit filename="/home/bruno/CLionProjects/ProjetoLA/interface.c">
+			<Option target="ProjetoLA"/>
+		</Unit>
+		<Unit filename="/home/bruno/CLionProjects/ProjetoLA/interface.h">
+			<Option target="ProjetoLA"/>
+		</Unit>
+		<Unit filename="/home/bruno/CLionProjects/ProjetoLA/lista.c">
+			<Option target="ProjetoLA"/>
+		</Unit>
+		<Unit filename="/home/bruno/CLionProjects/ProjetoLA/lista.h">
+			<Option target="ProjetoLA"/>
+		</Unit>
+		<Unit filename="/home/bruno/CLionProjects/ProjetoLA/logica.c">
+			<Option target="ProjetoLA"/>
+		</Unit>
+		<Unit filename="/home/bruno/CLionProjects/ProjetoLA/logica.h">
+			<Option target="ProjetoLA"/>
+		</Unit>
+		<Unit filename="/home/bruno/CLionProjects/ProjetoLA/main.c">
+			<Option target="ProjetoLA"/>
+		</Unit>
+		<Unit filename="/home/bruno/CLionProjects/ProjetoLA/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/bruno/CLionProjects/ProjetoLA/dados.h
+bits/types/FILE.h
+-
+
+/home/bruno/CLionProjects/ProjetoLA/interface.c
+time.h
+-
+interface.h
+/home/bruno/CLionProjects/ProjetoLA/interface.h
+dados.h
+/home/bruno/CLionProjects/ProjetoLA/dados.h
+logica.h
+/home/bruno/CLionProjects/ProjetoLA/logica.h
+string.h
+-
+stdio.h
+-
+lista.h
+/home/bruno/CLionProjects/ProjetoLA/lista.h
+stdlib.h
+-
+
+/home/bruno/CLionProjects/ProjetoLA/interface.h
+dados.h
+/home/bruno/CLionProjects/ProjetoLA/dados.h
+
+/home/bruno/CLionProjects/ProjetoLA/lista.h
+dados.h
+/home/bruno/CLionProjects/ProjetoLA/dados.h
+
+/home/bruno/CLionProjects/ProjetoLA/logica.h
+lista.h
+/home/bruno/CLionProjects/ProjetoLA/lista.h
+
