@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="structCOORDENADA" kind="struct"><name>COORDENADA</name>
+    <member refid="structCOORDENADA_1adfbc8d4856ce807139fdf62e00aed29a" kind="variable"><name>coluna</name></member>
+    <member refid="structCOORDENADA_1aefe14bcc5a066ac3b21500cc3d28c06f" kind="variable"><name>linha</name></member>
+  </compound>
+  <compound refid="structESTADO" kind="struct"><name>ESTADO</name>
+    <member refid="structESTADO_1ab56f0f1be16954d3768b4174d14c087d" kind="variable"><name>tab</name></member>
+    <member refid="structESTADO_1a4896a5c5c1f40b43fb795623327e3f47" kind="variable"><name>ultima_jogada</name></member>
+    <member refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" kind="variable"><name>jogadas</name></member>
+    <member refid="structESTADO_1a261495728744647e618b4e623f5a4b7a" kind="variable"><name>num_jogadas</name></member>
+    <member refid="structESTADO_1a5dd28e2e68b7aef2b6b7ea88e02eff58" kind="variable"><name>jogador_atual</name></member>
+    <member refid="structESTADO_1adf1064dfc09145b6995a7897249f1674" kind="variable"><name>num_comando</name></member>
+  </compound>
+  <compound refid="structJOGADA" kind="struct"><name>JOGADA</name>
+    <member refid="structJOGADA_1a93d9306cb0c49b66b7d9a615bffe0149" kind="variable"><name>jogador1</name></member>
+    <member refid="structJOGADA_1ab46b16dfbdc7f2af9430c8dcdac0914b" kind="variable"><name>jogador2</name></member>
+  </compound>
+  <compound refid="structlista" kind="struct"><name>lista</name>
+    <member refid="structlista_1a0b78bc3afb2152a258037412c59cf888" kind="variable"><name>conteudo</name></member>
+    <member refid="structlista_1a3b0e375147c1163d74544fd206a1f1de" kind="variable"><name>prox</name></member>
+  </compound>
+  <compound refid="3_815_83_2CompilerIdC_2CMakeCCompilerId_8c" kind="file"><name>CMakeCCompilerId.c</name>
+    <member refid="3_815_83_2CompilerIdC_2CMakeCCompilerId_8c_1a81dee0709ded976b2e0319239f72d174" kind="define"><name>COMPILER_ID</name></member>
+    <member refid="3_815_83_2CompilerIdC_2CMakeCCompilerId_8c_1a2ae9b72bb13abaabfcf2ee0ba7d3fa1d" kind="define"><name>STRINGIFY_HELPER</name></member>
+    <member refid="3_815_83_2CompilerIdC_2CMakeCCompilerId_8c_1a43e1cad902b6477bec893cb6430bd6c8" kind="define"><name>STRINGIFY</name></member>
+    <member refid="3_815_83_2CompilerIdC_2CMakeCCompilerId_8c_1adbc5372f40838899018fadbc89bd588b" kind="define"><name>PLATFORM_ID</name></member>
+    <member refid="3_815_83_2CompilerIdC_2CMakeCCompilerId_8c_1aba35d0d200deaeb06aee95ca297acb28" kind="define"><name>ARCHITECTURE_ID</name></member>
+    <member refid="3_815_83_2CompilerIdC_2CMakeCCompilerId_8c_1ad1280362da42492bbc11aa78cbf776ad" kind="define"><name>DEC</name></member>
+    <member refid="3_815_83_2CompilerIdC_2CMakeCCompilerId_8c_1a46d5d95daa1bef867bd0179594310ed5" kind="define"><name>HEX</name></member>
+    <member refid="3_815_83_2CompilerIdC_2CMakeCCompilerId_8c_1a07f8e5783674099cd7f5110e22a78cdb" kind="define"><name>C_DIALECT</name></member>
+    <member refid="3_815_83_2CompilerIdC_2CMakeCCompilerId_8c_1a4b0efeb7a5d59313986b3a0390f050f6" kind="variable"><name>info_compiler</name></member>
+    <member refid="3_815_83_2CompilerIdC_2CMakeCCompilerId_8c_1a2321403dee54ee23f0c2fa849c60f7d4" kind="variable"><name>info_platform</name></member>
+    <member refid="3_815_83_2CompilerIdC_2CMakeCCompilerId_8c_1a59647e99d304ed33b15cb284c27ed391" kind="variable"><name>info_arch</name></member>
+    <member refid="3_815_83_2CompilerIdC_2CMakeCCompilerId_8c_1a1ce162bad2fe6966ac8b33cc19e120b8" kind="variable"><name>info_language_dialect_default</name></member>
+    <member refid="3_815_83_2CompilerIdC_2CMakeCCompilerId_8c_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="3_816_85_2CompilerIdC_2CMakeCCompilerId_8c" kind="file"><name>CMakeCCompilerId.c</name>
+    <member refid="3_816_85_2CompilerIdC_2CMakeCCompilerId_8c_1a81dee0709ded976b2e0319239f72d174" kind="define"><name>COMPILER_ID</name></member>
+    <member refid="3_816_85_2CompilerIdC_2CMakeCCompilerId_8c_1a2ae9b72bb13abaabfcf2ee0ba7d3fa1d" kind="define"><name>STRINGIFY_HELPER</name></member>
+    <member refid="3_816_85_2CompilerIdC_2CMakeCCompilerId_8c_1a43e1cad902b6477bec893cb6430bd6c8" kind="define"><name>STRINGIFY</name></member>
+    <member refid="3_816_85_2CompilerIdC_2CMakeCCompilerId_8c_1adbc5372f40838899018fadbc89bd588b" kind="define"><name>PLATFORM_ID</name></member>
+    <member refid="3_816_85_2CompilerIdC_2CMakeCCompilerId_8c_1aba35d0d200deaeb06aee95ca297acb28" kind="define"><name>ARCHITECTURE_ID</name></member>
+    <member refid="3_816_85_2CompilerIdC_2CMakeCCompilerId_8c_1ad1280362da42492bbc11aa78cbf776ad" kind="define"><name>DEC</name></member>
+    <member refid="3_816_85_2CompilerIdC_2CMakeCCompilerId_8c_1a46d5d95daa1bef867bd0179594310ed5" kind="define"><name>HEX</name></member>
+    <member refid="3_816_85_2CompilerIdC_2CMakeCCompilerId_8c_1a07f8e5783674099cd7f5110e22a78cdb" kind="define"><name>C_DIALECT</name></member>
+    <member refid="3_816_85_2CompilerIdC_2CMakeCCompilerId_8c_1a4b0efeb7a5d59313986b3a0390f050f6" kind="variable"><name>info_compiler</name></member>
+    <member refid="3_816_85_2CompilerIdC_2CMakeCCompilerId_8c_1a2321403dee54ee23f0c2fa849c60f7d4" kind="variable"><name>info_platform</name></member>
+    <member refid="3_816_85_2CompilerIdC_2CMakeCCompilerId_8c_1a59647e99d304ed33b15cb284c27ed391" kind="variable"><name>info_arch</name></member>
+    <member refid="3_816_85_2CompilerIdC_2CMakeCCompilerId_8c_1a1ce162bad2fe6966ac8b33cc19e120b8" kind="variable"><name>info_language_dialect_default</name></member>
+    <member refid="3_816_85_2CompilerIdC_2CMakeCCompilerId_8c_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="dados_8c" kind="file"><name>dados.c</name>
+    <member refid="dados_8c_1a7e0c7e26fb685d9ab501e19b05e6954f" kind="function"><name>inicializar_estado</name></member>
+    <member refid="dados_8c_1ae926426c10698aeb0cfab3ab6507313e" kind="function"><name>atualiza_estado_casa</name></member>
+    <member refid="dados_8c_1a30ed3311c93662ed15ec88bdc86d9855" kind="function"><name>consulta_posicao</name></member>
+    <member refid="dados_8c_1a92a53c83eed376d935acbf128a409c11" kind="function"><name>atualiza_ultima</name></member>
+    <member refid="dados_8c_1a5145e20d5e4abdb6ca062e18cee9efab" kind="function"><name>atualiza_jogador</name></member>
+    <member refid="dados_8c_1a2c362b52acc2b5010a20a7aa36818dad" kind="function"><name>consulta_jogador</name></member>
+    <member refid="dados_8c_1a4bea65e08fbf43bd3797e37072e44bdb" kind="function"><name>muda_pos_ultima</name></member>
+    <member refid="dados_8c_1adc839b5b07de85fcd71f002d76ad378c" kind="function"><name>casa_final</name></member>
+    <member refid="dados_8c_1a21e3a5d323686285c4f2590123ace857" kind="function"><name>atualiza_jogadas</name></member>
+  </compound>
+  <compound refid="dados_8h" kind="file"><name>dados.h</name>
+    <member refid="dados_8h_1a6821bafc3c88dfb2e433a095df9940c6" kind="define"><name>BUF_SIZE</name></member>
+    <member refid="dados_8h_1aba91601f16d4c485b2d9b8c429f27039" kind="enum"><name>CASA</name></member>
+    <member refid="dados_8h_1aba91601f16d4c485b2d9b8c429f27039abc711f491a56ec7af7a688be508c5113" kind="enumvalue"><name>VAZIO</name></member>
+    <member refid="dados_8h_1aba91601f16d4c485b2d9b8c429f27039ad24485fddec75419fd4a0cc9edda0ca5" kind="enumvalue"><name>BRANCA</name></member>
+    <member refid="dados_8h_1aba91601f16d4c485b2d9b8c429f27039a007278eb3827d19891b47cdd3ac8846d" kind="enumvalue"><name>PRETA</name></member>
+    <member refid="dados_8h_1aba91601f16d4c485b2d9b8c429f27039ab620e38b0268bee43c7e9a88bd6e73fa" kind="enumvalue"><name>UM</name></member>
+    <member refid="dados_8h_1aba91601f16d4c485b2d9b8c429f27039a2bf153109d0c8b96e61bc18d5be7c5da" kind="enumvalue"><name>DOIS</name></member>
+    <member refid="dados_8h_1a94c221d29a1760f008b7834093259b7d" kind="typedef"><name>JOGADAS</name></member>
+    <member refid="dados_8h_1a7e0c7e26fb685d9ab501e19b05e6954f" kind="function"><name>inicializar_estado</name></member>
+    <member refid="dados_8h_1ae926426c10698aeb0cfab3ab6507313e" kind="function"><name>atualiza_estado_casa</name></member>
+    <member refid="dados_8h_1a92a53c83eed376d935acbf128a409c11" kind="function"><name>atualiza_ultima</name></member>
+    <member refid="dados_8h_1a5145e20d5e4abdb6ca062e18cee9efab" kind="function"><name>atualiza_jogador</name></member>
+    <member refid="dados_8h_1a4bea65e08fbf43bd3797e37072e44bdb" kind="function"><name>muda_pos_ultima</name></member>
+    <member refid="dados_8h_1a2c362b52acc2b5010a20a7aa36818dad" kind="function"><name>consulta_jogador</name></member>
+    <member refid="dados_8h_1a30ed3311c93662ed15ec88bdc86d9855" kind="function"><name>consulta_posicao</name></member>
+    <member refid="dados_8h_1adc839b5b07de85fcd71f002d76ad378c" kind="function"><name>casa_final</name></member>
+    <member refid="dados_8h_1a21e3a5d323686285c4f2590123ace857" kind="function"><name>atualiza_jogadas</name></member>
+  </compound>
+  <compound refid="interface_8c" kind="file"><name>interface.c</name>
+    <member refid="interface_8c_1a6821bafc3c88dfb2e433a095df9940c6" kind="define"><name>BUF_SIZE</name></member>
+    <member refid="interface_8c_1a9eb2813a6ac1e79a76f920f9a4f32bb6" kind="function"><name>mostra_prompt</name></member>
+    <member refid="interface_8c_1a49c8e6516320a095ffd3cf91405cecee" kind="function"><name>mostrar_tabuleiro</name></member>
+    <member refid="interface_8c_1a24da95ebeede4a540e37790ce8be359b" kind="function"><name>interpretador</name></member>
+    <member refid="interface_8c_1a47013431965901d535f3c4391b61cdd5" kind="function"><name>guardar</name></member>
+    <member refid="interface_8c_1a9666d1e07aff3ca224916eb121dc11e9" kind="function"><name>ler</name></member>
+    <member refid="interface_8c_1ae41ae486081ebf357b40a1a554daae71" kind="function"><name>movs</name></member>
+    <member refid="interface_8c_1a7fb08231327a3410b30705f367e50c67" kind="function"><name>inseremovs</name></member>
+    <member refid="interface_8c_1a5502a84da6d5bffda87a2ab6ee43c163" kind="function"><name>pos</name></member>
+    <member refid="interface_8c_1a9dfbc982d23a619e36575d8e7ec8e41c" kind="function"><name>jog</name></member>
+    <member refid="interface_8c_1a75a3c6feb2f2ec713f96559558b136d0" kind="function"><name>jog2</name></member>
+  </compound>
+  <compound refid="interface_8h" kind="file"><name>interface.h</name>
+    <member refid="interface_8h_1a49c8e6516320a095ffd3cf91405cecee" kind="function"><name>mostrar_tabuleiro</name></member>
+    <member refid="interface_8h_1a24da95ebeede4a540e37790ce8be359b" kind="function"><name>interpretador</name></member>
+    <member refid="interface_8h_1a9eb2813a6ac1e79a76f920f9a4f32bb6" kind="function"><name>mostra_prompt</name></member>
+    <member refid="interface_8h_1a47013431965901d535f3c4391b61cdd5" kind="function"><name>guardar</name></member>
+    <member refid="interface_8h_1a0096ae2fafe42cc41650df4856ba7fa1" kind="function"><name>convertelinha</name></member>
+    <member refid="interface_8h_1a9666d1e07aff3ca224916eb121dc11e9" kind="function"><name>ler</name></member>
+    <member refid="interface_8h_1ae41ae486081ebf357b40a1a554daae71" kind="function"><name>movs</name></member>
+    <member refid="interface_8h_1a7fb08231327a3410b30705f367e50c67" kind="function"><name>inseremovs</name></member>
+    <member refid="interface_8h_1a5502a84da6d5bffda87a2ab6ee43c163" kind="function"><name>pos</name></member>
+    <member refid="interface_8h_1a9dfbc982d23a619e36575d8e7ec8e41c" kind="function"><name>jog</name></member>
+    <member refid="interface_8h_1a75a3c6feb2f2ec713f96559558b136d0" kind="function"><name>jog2</name></member>
+  </compound>
+  <compound refid="lista_8c" kind="file"><name>lista.c</name>
+    <member refid="lista_8c_1ae3b99323b6f8f35d80bb69ff1a27985e" kind="function"><name>criar_lista</name></member>
+    <member refid="lista_8c_1a37ba5fc3cfddb6bc94d4b54b00bc696e" kind="function"><name>insere_cabeca</name></member>
+    <member refid="lista_8c_1abfcb205f3eb670157be0d1221021714b" kind="function"><name>devolve_cabeca</name></member>
+    <member refid="lista_8c_1ad9380152361127432c55c1c6067e05ae" kind="function"><name>proximo</name></member>
+    <member refid="lista_8c_1a9026a681a68322b5ec7f07137b864cbd" kind="function"><name>remove_cabeca</name></member>
+    <member refid="lista_8c_1a4c10928f7acaa4e3de3760cea0dfd9c0" kind="function"><name>lista_esta_vazia</name></member>
+  </compound>
+  <compound refid="lista_8h" kind="file"><name>lista.h</name>
+    <member refid="lista_8h_1acfb1dbdea7214f3efb9334ffef161dad" kind="typedef"><name>LISTA</name></member>
+    <member refid="lista_8h_1ae3b99323b6f8f35d80bb69ff1a27985e" kind="function"><name>criar_lista</name></member>
+    <member refid="lista_8h_1a37ba5fc3cfddb6bc94d4b54b00bc696e" kind="function"><name>insere_cabeca</name></member>
+    <member refid="lista_8h_1abfcb205f3eb670157be0d1221021714b" kind="function"><name>devolve_cabeca</name></member>
+    <member refid="lista_8h_1ad9380152361127432c55c1c6067e05ae" kind="function"><name>proximo</name></member>
+    <member refid="lista_8h_1a9026a681a68322b5ec7f07137b864cbd" kind="function"><name>remove_cabeca</name></member>
+    <member refid="lista_8h_1a4c10928f7acaa4e3de3760cea0dfd9c0" kind="function"><name>lista_esta_vazia</name></member>
+  </compound>
+  <compound refid="logica_8c" kind="file"><name>logica.c</name>
+    <member refid="logica_8c_1ac313d7e553b1e2b5f266acb9bfff8141" kind="function"><name>jogar</name></member>
+    <member refid="logica_8c_1ab1160bacb55fe9977b2a60e615c2e627" kind="function"><name>jogada_valida</name></member>
+    <member refid="logica_8c_1ad3c7054170580d3d9c74e7d5cdd00395" kind="function"><name>fim_jogo</name></member>
+    <member refid="logica_8c_1a5d6c3f49db97c5c6317fe53d0cb6af53" kind="function"><name>possivel_jogar</name></member>
+    <member refid="logica_8c_1a3fcfdc9778d725b67d8d6fc2fc5729c1" kind="function"><name>listagem_de_jogadas</name></member>
+    <member refid="logica_8c_1a9d81453517dfb252a97ca498601cdd16" kind="function"><name>distancia</name></member>
+  </compound>
+  <compound refid="logica_8h" kind="file"><name>logica.h</name>
+    <member refid="logica_8h_1ac313d7e553b1e2b5f266acb9bfff8141" kind="function"><name>jogar</name></member>
+    <member refid="logica_8h_1ab1160bacb55fe9977b2a60e615c2e627" kind="function"><name>jogada_valida</name></member>
+    <member refid="logica_8h_1ad3c7054170580d3d9c74e7d5cdd00395" kind="function"><name>fim_jogo</name></member>
+    <member refid="logica_8h_1a5d6c3f49db97c5c6317fe53d0cb6af53" kind="function"><name>possivel_jogar</name></member>
+    <member refid="logica_8h_1a3fcfdc9778d725b67d8d6fc2fc5729c1" kind="function"><name>listagem_de_jogadas</name></member>
+    <member refid="logica_8h_1a9d81453517dfb252a97ca498601cdd16" kind="function"><name>distancia</name></member>
+  </compound>
+  <compound refid="main_8c" kind="file"><name>main.c</name>
+    <member refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="dir_f942a7a73394fda25d4213a70555b3f8" kind="dir"><name>cmake-build-debug/CMakeFiles/3.15.3</name>
+  </compound>
+  <compound refid="dir_e1ecdbac78f5041bd527fb40a7fd21eb" kind="dir"><name>cmake-build-debug/CMakeFiles/3.16.5</name>
+  </compound>
+  <compound refid="dir_95e29a8b8ee7c54052c171a88bb95675" kind="dir"><name>cmake-build-debug</name>
+  </compound>
+  <compound refid="dir_f89abcb304c928c7d889aa5625570de5" kind="dir"><name>cmake-build-debug/CMakeFiles</name>
+  </compound>
+  <compound refid="dir_2942f868a03c41b22a536fdc77b965b5" kind="dir"><name>cmake-build-debug/CMakeFiles/3.16.5/CompilerIdC</name>
+  </compound>
+  <compound refid="dir_44ea9ed243d3740341f2efeb45271ac4" kind="dir"><name>cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC</name>
+  </compound>
+</doxygenindex>
