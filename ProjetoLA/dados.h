@@ -12,7 +12,7 @@ Definição do estado e das funções que o manipulam
 /**
 \brief Tipo de dados para a casa
 */
-    typedef enum {VAZIO='.', BRANCA='*', PRETA='#',UM='1',DOIS='2'} CASA;
+typedef enum {VAZIO='.', BRANCA='*', PRETA='#',UM='1',DOIS='2'} CASA;
 /**
 \brief Tipo de dados para as coordenadas
 */
@@ -99,7 +99,7 @@ CASA consulta_posicao(ESTADO *e, int x, int y);
  */
 CASA casa_final(ESTADO *e,int x);
 /**
- * /brief Atualiza as jogadas
+ * \brief Atualiza as jogadas
  * @param e indicador para o estado
  * @param c A coordenada
  */
