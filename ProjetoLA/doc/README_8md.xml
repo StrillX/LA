@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>LA</highlight></codeline>
+<codeline><highlight class="normal">Projeto<sp/>LA</highlight></codeline>
+<codeline><highlight class="normal">Grupo<sp/>6,PL1,LCC;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">A91699<sp/>Pedro<sp/>Miguel<sp/>Marques<sp/>Fernandes;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">A91643<sp/>Eduardo<sp/>Nuno<sp/>Teniz<sp/>Freitas;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">A91680<sp/>Bruno<sp/>Filipe<sp/>Jardim<sp/>Machado;</highlight></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>
